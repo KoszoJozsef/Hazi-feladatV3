@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
@@ -31,7 +31,7 @@
 		</div>
 
 		<c:choose>
-			<c:when test2="#{vehicleMB.id > 0}">
+			<c:when test="#{vehicleMB.id > 0}">
 				<h:inputHidden value="#{vehicleMB.id}" />
 				<h:commandButton action="#{vehicleMB.updateVehicle()}" value="Update" />
 			</c:when>
@@ -42,32 +42,36 @@
 		
 	</h:form>
 	
-	<table>
+	<table border="solid" cellpadding="2" cellspacing="3">
 		<thead>
 			<tr>
+				<th>Id</th>
 				<th>Brand</th>
 				<th>Model</th>
 				<th>TypeDesignation</th>
 				<th>VIN</th>
 				<th>Comment</th>
+				<th></th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
-			<ui:repeat var="vehi" value="#{vehicleMB.getVehicleList()}">
+			<ui:repeat var="v" value="#{vehicleMB.getVehicles()}">
 				<tr>
-					<td>#{vehi.brand}</td>
-					<td>#{vehi.model}</td>
-					<td>#{vehi.typeDesignation}</td>
-					<td>#{vehi.VIN}</td>
-					<td>#{vehi.comment}</td>
+					<td>#{v.id}</td>
+					<td>#{v.brand}</td>
+					<td>#{v.model}</td>
+					<td>#{v.typeDesignation}</td>
+					<td>#{v.VIN}</td>
+					<td>#{v.comment}</td>
 					<td>
 						<h:form>
-							<h:commandLink action="#{vehicleMB.getVehicle(vehi.id)}" value="Edit" />
+							<h:commandLink action="#{vehicleMB.getVehicle(v.id)}" value="Edit" />
 						</h:form>
 					</td>
 					<td>
 						<h:form>
-							<h:commandLink action="#{vehicleMB.deleteVehicle(vehi.id)}" value="Delete" />
+							<h:commandLink action="#{vehicleMB.deleteVehicle(v.id)}" value="Delete" />
 						</h:form>
 					</td>
 					

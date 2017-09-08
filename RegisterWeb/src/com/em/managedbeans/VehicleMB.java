@@ -22,9 +22,9 @@ public class VehicleMB {
 	private String typeDesignation;
 	private String VIN;
 	private String comment;
-	private boolean seatHeating;
-	private boolean airbags;
-	private boolean overturningSystem;
+//	private boolean seatHeating;
+//	private boolean airbags;
+//	private boolean overturningSystem;
 	
 	public void createVehicle(){
 		Vehicle v = new Vehicle();
@@ -33,9 +33,9 @@ public class VehicleMB {
 		v.setTypeDesignation(typeDesignation);
 		v.setVIN(VIN);
 		v.setComment(comment);
-		v.setSeatHeating(seatHeating);
-		v.setAirbags(airbags);
-		v.setOverturningSystem(overturningSystem);
+//		v.setSeatHeating(seatHeating);
+//		v.setAirbags(airbags);
+//		v.setOverturningSystem(overturningSystem);
 		
 		vehiclebl.createVehicle(v);
 		
@@ -49,9 +49,9 @@ public class VehicleMB {
 		v.setTypeDesignation(typeDesignation);
 		v.setVIN(VIN);
 		v.setComment(comment);
-		v.setSeatHeating(seatHeating);
-		v.setAirbags(airbags);
-		v.setOverturningSystem(overturningSystem);
+//		v.setSeatHeating(seatHeating);
+//		v.setAirbags(airbags);
+//		v.setOverturningSystem(overturningSystem);
 		
 		vehiclebl.createVehicle(v);
 	}
@@ -68,12 +68,12 @@ public class VehicleMB {
 		typeDesignation = v.getTypeDesignation();
 		VIN = v.getVIN();
 		comment = v.getComment();
-		seatHeating = v.getSeatHeating();
-		airbags = v.getAirbags();
-		overturningSystem = v.getOverturningSystem();
+//		seatHeating = v.getSeatHeating();
+//		airbags = v.getAirbags();
+//		overturningSystem = v.getOverturningSystem();
 	}
 	
-	public List<Vehicle> getVehicleList(){
+	public List<Vehicle> getVehicles(){
 		return vehiclebl.getVehicleList();
 	}
 
@@ -125,28 +125,28 @@ public class VehicleMB {
 		this.comment = comment;
 	}
 
-	public boolean isSeatHeating() {
-		return seatHeating;
-	}
-
-	public void setSeatHeating(boolean seatHeating) {
-		this.seatHeating = seatHeating;
-	}
-
-	public boolean isAirbags() {
-		return airbags;
-	}
-
-	public void setAirbags(boolean airbags) {
-		this.airbags = airbags;
-	}
-
-	public boolean isOverturningSystem() {
-		return overturningSystem;
-	}
-
-	public void setOverturningSystem(boolean overturningSystem) {
-		this.overturningSystem = overturningSystem;
-	}
+//	public boolean isSeatHeating() {
+//		return seatHeating;
+//	}
+//
+//	public void setSeatHeating(boolean seatHeating) {
+//		this.seatHeating = seatHeating;
+//	}
+//
+//	public boolean isAirbags() {
+//		return airbags;
+//	}
+//
+//	public void setAirbags(boolean airbags) {
+//		this.airbags = airbags;
+//	}
+//
+//	public boolean isOverturningSystem() {
+//		return overturningSystem;
+//	}
+//
+//	public void setOverturningSystem(boolean overturningSystem) {
+//		this.overturningSystem = overturningSystem;
+//	}
 	
 }

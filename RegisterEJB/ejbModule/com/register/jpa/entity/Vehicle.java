@@ -71,21 +71,21 @@ public class Vehicle implements Serializable {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}   
-	public boolean getSeatHeating() {
+	public boolean isSeatHeating() {
 		return this.seatHeating;
 	}
 
 	public void setSeatHeating(boolean seatHeating) {
 		this.seatHeating = seatHeating;
 	}   
-	public boolean getAirbags() {
+	public boolean isAirbags() {
 		return this.airbags;
 	}
 
 	public void setAirbags(boolean airbags) {
 		this.airbags = airbags;
 	}   
-	public boolean getOverturningSystem() {
+	public boolean isOverturningSystem() {
 		return this.overturningSystem;
 	}
 
