@@ -25,7 +25,7 @@ public class UserMB {
 	private String lastname;
 	private Role role;
 	
-	public void updateVehicle(){
+	public void updateUser(){
 		ApplicationUser u = new ApplicationUser();
 		u.setId(id);
 		u.setUsername(username);
@@ -50,4 +50,54 @@ public class UserMB {
 		return userbl.getUserList();
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	
+	
 }

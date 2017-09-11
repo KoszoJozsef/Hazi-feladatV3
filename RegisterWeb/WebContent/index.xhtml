@@ -4,10 +4,67 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
 
-<h:head></h:head>
+<h:head>
+
+	<title>Welcome</title>
+	
+	<style>
+		#login-form{
+			width: 300px;
+			margin: 50px auto;
+			
+		}
+		#login-form table{
+			border: 1px solid #DDD;
+			padding: 50px;
+		}
+		:FOCUS{
+			outline: none;
+		}
+		#login-form input[type='text'], #login-form input[type='password']{
+			border: 1px solid #DDD;
+			padding: 3px;
+		}
+		#login-form input[type='submit']{
+			border: 1px solid #DDD;
+			width: 100%;
+			padding: 5px;
+			background-color: activeborder;
+			border-radius: 3px;
+			font-size: 15px;
+			color: white;
+		}
+		#login-form input[type='submit']:ACTIVE{
+			background-color: #ececec;
+		}
+	</style>
+	
+</h:head>
 
 <h:body>
-Hello World!
+	<div id="login-form">
+		<h:form>
+			<table>
+				<tr>
+					<td>Username : </td>
+					<td>
+						<h:inputText value="#{userMB.username}" />
+					</td>
+				</tr>
+				<tr>
+					<td>Password : </td>
+					<td>
+						<h:inputSecret value="#{userMB.password}" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<h:commandButton value="Log in" />
+					</td>
+				</tr>
+			</table>
+		</h:form>
+	</div>
 </h:body>
 
 

@@ -31,47 +31,33 @@
 		</div>
 
 		<c:choose>
-			<c:when test="#{vehicleMB.id > 0}">
-				<h:inputHidden value="#{vehicleMB.id}" />
-				<h:commandButton action="#{vehicleMB.updateVehicle()}" value="Update" />
+			<c:when test="#{userMB.id > 0}">
+				<h:inputHidden value="#{userMB.id}" />
+				<h:commandButton action="#{userMB.updateUser()}" value="Update" />
 			</c:when>
-			<c:otherwise>
-				<h:commandButton action="#{vehicleMB.createVehicle()}" value="Create" />
-			</c:otherwise>
 		</c:choose>
-		
 	</h:form>
-	<h:form>
+	
 	<table border="solid" cellpadding="2" cellspacing="3">
 		<thead>
 			<tr>
 				<th>Id</th>
-				<th>Brand</th>
-				<th>Model</th>
-				<th>TypeDesignation</th>
-				<th>VIN</th>
-				<th>Comment</th>
-				<th></th>
+				<th>Name</th>
+				<th>Last login</th>
+				<th>Role</th>
 				<th></th>
 			</tr>
 		</thead>
 		<tbody>
-			<ui:repeat var="v" value="#{vehicleMB.getVehicles()}">
+			<ui:repeat var="u" value="#{userMB.getUsers()}">
 				<tr>
-					<td>#{v.id}</td>
-					<td>#{v.brand}</td>
-					<td>#{v.model}</td>
-					<td>#{v.typeDesignation}</td>
-					<td>#{v.VIN}</td>
-					<td>#{v.comment}</td>
+					<td>#{u.id}</td>
+					<td>#{u.firstname} #{u.lastname}</td>
+					<td>#{u.lastLogin}</td>
+					<td>#{u.role}</td>
 					<td>
 						<h:form>
-							<h:commandLink action="#{vehicleMB.getVehicle(v.id)}" value="Edit" />
-						</h:form>
-					</td>
-					<td>
-						<h:form>
-							<h:commandLink action="#{vehicleMB.deleteVehicle(v.id)}" value="Delete" />
+							<h:commandLink action="#{userMB.getUser(u.id)}" value="Edit" />
 						</h:form>
 					</td>
 					
@@ -79,6 +65,8 @@
 			</ui:repeat>
 		</tbody>
 	</table>
-	</h:form>
+	
+	
 </h:body>
+
 </html>
