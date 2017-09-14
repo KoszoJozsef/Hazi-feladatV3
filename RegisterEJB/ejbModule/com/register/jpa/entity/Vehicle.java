@@ -21,10 +21,9 @@ public class Vehicle implements Serializable {
 	private String typeDesignation;
 	private String VIN;
 	private String comment;
-	private boolean seatHeating;
-	private boolean airbags;
-	private boolean overturningSystem;
-	private static final long serialVersionUID = 1L;
+//	private boolean seatHeating;
+//	private boolean airbags;
+//	private boolean overturningSystem;
 
 	public Vehicle() {
 		super();
@@ -71,26 +70,26 @@ public class Vehicle implements Serializable {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}   
-	public boolean isSeatHeating() {
-		return this.seatHeating;
-	}
-
-	public void setSeatHeating(boolean seatHeating) {
-		this.seatHeating = seatHeating;
-	}   
-	public boolean isAirbags() {
-		return this.airbags;
-	}
-
-	public void setAirbags(boolean airbags) {
-		this.airbags = airbags;
-	}   
-	public boolean isOverturningSystem() {
-		return this.overturningSystem;
-	}
-
-	public void setOverturningSystem(boolean overturningSystem) {
-		this.overturningSystem = overturningSystem;
-	}
+//	public boolean isSeatHeating() {
+//		return this.seatHeating;
+//	}
+//
+//	public void setSeatHeating(boolean seatHeating) {
+//		this.seatHeating = seatHeating;
+//	}   
+//	public boolean isAirbags() {
+//		return this.airbags;
+//	}
+//
+//	public void setAirbags(boolean airbags) {
+//		this.airbags = airbags;
+//	}   
+//	public boolean isOverturningSystem() {
+//		return this.overturningSystem;
+//	}
+//
+//	public void setOverturningSystem(boolean overturningSystem) {
+//		this.overturningSystem = overturningSystem;
+//	}
    
 }

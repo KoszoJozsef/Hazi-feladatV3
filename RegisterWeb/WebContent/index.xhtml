@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -43,7 +44,7 @@
 
 <h:body>
 	<div id="login-form">
-		<h:form>
+		<form>
 			<table>
 				<tr>
 					<td>Username : </td>
@@ -59,11 +60,13 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<h:commandButton value="Log in" />
+						<button type="submit">
+							<span>Log In</span>
+						</button>
 					</td>
 				</tr>
 			</table>
-		</h:form>
+		</form>
 	</div>
 </h:body>
 

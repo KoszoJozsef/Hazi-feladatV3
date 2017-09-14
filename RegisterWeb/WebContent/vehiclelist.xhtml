@@ -1,14 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:c="http://java.sun.com/jsp/jstl/core">
 
 <h:head></h:head>
 
 <h:body>
-	<h:form>
+	<form>
 		<div>
 			<h:outputLabel value = "Brand" />
 			<h:inputText value = "#{vehicleMB.brand}" />
@@ -40,45 +41,42 @@
 			</c:otherwise>
 		</c:choose>
 		
-	</h:form>
-	<h:form>
+	</form>
+
 	<table border="solid" cellpadding="2" cellspacing="3">
 		<thead>
-			<tr>
-				<th>Id</th>
-				<th>Brand</th>
-				<th>Model</th>
-				<th>TypeDesignation</th>
-				<th>VIN</th>
-				<th>Comment</th>
-				<th></th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<ui:repeat var="v" value="#{vehicleMB.getVehicles()}">
-				<tr>
-					<td>#{v.id}</td>
-					<td>#{v.brand}</td>
-					<td>#{v.model}</td>
-					<td>#{v.typeDesignation}</td>
-					<td>#{v.VIN}</td>
-					<td>#{v.comment}</td>
-					<td>
-						<h:form>
+    			<tr>
+    				<th>Id</th>
+    				<th>Brand</th>
+    				<th>Model</th>
+    				<th>TypeDesignation</th>
+    				<th>VIN</th>
+    				<th>Comment</th>
+    				<th></th>
+    				<th></th>
+    			</tr>
+    	</thead>
+    	<tbody>
+	    			<ui:repeat var="v" value="#{vehicleMB.vehicles}">
+	    				<td>#{vehicleMB.id}</td>
+	    				<td>#{v.brand}</td>
+	    				<td>#{v.model}</td>
+	    				<td>#{v.typeDesignation}</td>
+	    				<td>#{v.VIN}</td>
+	    				<td>#{v.comment}</td>
+	    				<td>
+						<form>
 							<h:commandLink action="#{vehicleMB.getVehicle(v.id)}" value="Edit" />
-						</h:form>
-					</td>
-					<td>
-						<h:form>
+						</form>
+						</td>
+						<td>
+						<form>
 							<h:commandLink action="#{vehicleMB.deleteVehicle(v.id)}" value="Delete" />
-						</h:form>
-					</td>
-					
-				</tr>
-			</ui:repeat>
-		</tbody>
-	</table>
-	</h:form>
+						</form>
+						</td>
+	    			</ui:repeat>
+    	</tbody>
+    </table>
+
 </h:body>
 </html>
